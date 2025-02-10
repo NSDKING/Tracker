@@ -1,7 +1,7 @@
 import React from 'react';
 import { Modal, View, Text, TextInput, Button, StyleSheet, TouchableWithoutFeedback, Keyboard } from 'react-native';
 
-interface FailModalProps {
+interface LogModalProps {
     modalVisible: boolean;
     setModalVisible: (visible: boolean) => void;
     logData: string;
@@ -9,7 +9,7 @@ interface FailModalProps {
     handleLogData: () => void;
 }
 
-const FailModal: React.FC<FailModalProps> = ({ modalVisible, setModalVisible, logData, setLogData, handleLogData }) => {
+const LogModal: React.FC<LogModalProps> = ({ modalVisible, setModalVisible, logData, setLogData, handleLogData }) => {
     return (
         <Modal
             animationType="slide"
@@ -78,5 +78,5 @@ const styles = StyleSheet.create({
     },
 });
 
-export default FailModal;
+export default LogModal;
 
