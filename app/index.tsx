@@ -1,5 +1,7 @@
 import { View, StyleSheet, Platform, Text } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; // Import Ionicons
+import { Colors } from '@/constants/Colors';
+import Card from '@/components/Card';
 
 export default function HomeScreen() {
   return (
@@ -9,8 +11,12 @@ export default function HomeScreen() {
         <Text style={styles.headerText}>Boards</Text>
         <Ionicons name="add-circle-outline" size={25} color="#000" style={styles.plusIcon} />
       </View>
-  
-    </View>
+      <View style={{ width:"100%", flexDirection:"row", justifyContent:"space-between"}}>
+        <Card/>
+        <Card/>
+
+      </View>
+     </View>
   );
 }
 
@@ -20,6 +26,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column', 
     alignItems: 'center', 
     padding:20,
+    backgroundColor:Colors.light.background,
   },
   header:{
     width:"100%",
